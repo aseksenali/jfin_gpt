@@ -85,7 +85,7 @@ services:
 
   backend:
     container_name: backend
-    build: jfin-gpt/
+    build: backend/
     ports:
       - "5110:5110"
     depends_on:
@@ -106,7 +106,7 @@ services:
 
   frontend:
     container_name: frontend
-    build: jfin_gpt_ui/
+    build: frontend/
     ports:
       - "3000:3000"
     depends_on:
