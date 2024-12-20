@@ -96,6 +96,12 @@ services:
     environment:
       EMBEDDING_MODEL_NAME: intfloat/multilingual-e5-base
       MODEL_NAME: llama3.2
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5110/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
     deploy:
       resources:
         reservations:
