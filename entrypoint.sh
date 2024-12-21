@@ -6,7 +6,7 @@ ollama serve &
 pid=$!
 
 # Pause for Ollama to start.
-sleep 5
+sleep 10
 
 echo "🔴 Retrieving model ${MODEL_NAME}..."
 ollama pull ${MODEL_NAME}
